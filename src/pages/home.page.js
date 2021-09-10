@@ -1,7 +1,7 @@
 import React from "react";
 import EntertainmentCardSlider from "../Components/Entertainment/EntertainmentCard.component";
 
-// import Premier from "../Components/Premier/premier.component";
+import Premier from "../Components/Premier/premier.component";
 
 
 import PosterSlider from "../Components/PosterSlider/PosterSlider.component";
@@ -42,6 +42,14 @@ const HomePage = () => {
         title="Online Streaming Events"
         isDark={false} />
     </div>
+
+    <div className="container mx-auto">
+        <PosterSlider
+        images ={TempPosters}
+        title="Outdoor  Events"
+        isDark={false} />
+    </div>
+
 
         </>
     );
