@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 
 import HomePage from "./pages/home.page";
 import Movie from "./pages/Movie.page";
-
+import Plays from "./pages/Plays.page"
 // Hoc
 
 import DefaultHOC from "./HOC/Default.HOC";
