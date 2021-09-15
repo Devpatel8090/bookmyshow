@@ -13,6 +13,7 @@ import DefaultHOC from "./HOC/Default.HOC";
 import MovieHOC from "./HOC/Movie.Hoc";
 
 // Component
+import Play from "./pages/Plays.page";
 
 
 
@@ -34,6 +35,7 @@ function App() {
     <>
     <DefaultHOC path="/" exact component={HomePage} />
     <MovieHOC path="/movie/:id"  exact component={Movie}  />
+    <DefaultHOC path ="/play"   exact component={Play} />
     
     </>
   );
