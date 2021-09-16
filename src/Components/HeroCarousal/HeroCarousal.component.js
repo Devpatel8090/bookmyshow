@@ -1,5 +1,6 @@
-import React from "react";
+import React , {useState , useEffect}from "react";
 import HeroSlider from "react-slick";
+import axios from "axios";
 
 //Component
 import { NextArrow,PrevArrow } from "./Arrows.component";
@@ -9,6 +10,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const HeroCarousal = () => {
+
+    const [images , setImages] = useState([]);
+
+
+    useEffect(() => {
+        const requestNowPlayingMovies = async() => {
+        const getImages = await axios.get("/movie/now_playing");
+        console.log(getImages);
+    };
+    requestNowPlayingMovies();
+}, []);
+
+
     const settingsLg = {
         arrows:true,
         autoplay:true,
@@ -30,13 +44,7 @@ var settings = {
     slidesToScroll: 1
   };
 
- const images =[
-        "https://in.bmscdn.com/promotions/cms/creatives/1630767397989_incinemas10thseptemberknowmore_webshowcase_1240x300.jpg",
-        "https://in.bmscdn.com/promotions/cms/creatives/1628591224466_fnbgeneric.jpg",
-        "https://in.bmscdn.com/promotions/cms/creatives/1630608713679_matrixfightnight6_webshowcase_1240x300.jpg",
-        "https://in.bmscdn.com/promotions/cms/creatives/1629830049996_celebfiecruisewiththestarsrevised_webshowcase_1240x300_24aug.jpg",
-        "https://in.bmscdn.com/promotions/cms/creatives/1630488455166_gauravguptalivestandupcomedyshow_webshowcase_1240x300_1sep.jpg"
-      ]
+ 
     
    return (
        <>

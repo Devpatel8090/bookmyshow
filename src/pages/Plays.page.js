@@ -73,9 +73,12 @@ return(
          <div className="lg:w-1/4  ">
            <h2 className="text-2xl font-bold mb-4">Filters</h2>
            <div>
-               <PlaysFilter title="Date" tags={["Today","Tomorrow","next Week"]}/>
+               <PlaysFilter title="Date" tags={["Today","Tomorrow","This Weekends"]}/>
                <PlaysFilter title="Language" tags={["Hindi","Gujarati",]}/>
-               <PlaysFilter title="theater" tags={["Theater"]}/>
+               <PlaysFilter title="Categories" tags={["Theatre"]}/>
+               <PlaysFilter title="Genres" tags={["Drama","Adaptation","Historical","Online Streaming Plays","Comedy"]}/>
+               <PlaysFilter title="More Filters" tags={["Online Streaming","Kids Allowed","Outdoor Events"]}/>
+               <PlaysFilter title="Price" tags={["Free","0-500","501-2000","Above 2000"]}/>
            </div>
 
             
